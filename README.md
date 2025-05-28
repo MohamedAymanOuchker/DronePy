@@ -1,6 +1,6 @@
 # DronePy
 
-A Python project for controlling a DJI Tello drone with various features including keyboard control, computer vision, and autonomous flight capabilities.
+A Python project for controlling a DJI Tello drone with features including keyboard control, computer vision, and autonomous flight capabilities.
 
 ## Features
 
@@ -16,11 +16,15 @@ A Python project for controlling a DJI Tello drone with various features includi
 - DJI Tello drone
 - WiFi connection to the drone
 
-Install dependencies:
+## Getting Started
 
-```sh
-pip install -r requirements.txt
-```
+1. Clone or download this repository.
+2. (Optional) Create and activate a virtual environment.
+3. Install dependencies:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
@@ -39,6 +43,7 @@ python KeyboardController.py
 python FaceTracking.py
 ```
 - Tracks faces in real-time using the drone's camera
+- Requires `Resources/haarcascade_frontalface_default.xml`
 
 ```sh
 python LineFollower.py
@@ -86,16 +91,23 @@ python BasicMovements.py
 - `ImageCapture.py` — Video streaming from the drone
 - `BasicMovements.py` — Example of scripted movement
 - `requirements.txt` — Python dependencies
+- `Resources/` — Resources for computer vision (e.g., face cascade XML, sample images)
 
 ## Dependencies
 
-- djitellopy - DJI Tello drone control
-- pygame - Keyboard input handling
-- opencv-python - Computer vision capabilities
+- djitellopy >=2.4
+- pygame >=2.0
+- opencv-python >=4.5
 
 ## Notes
 
-- Ensure your computer is connected to the Tello drone's WiFi before running any scripts
-- Tested on Windows with Python 3.10
-- Some features may require good lighting conditions for optimal performance
-- Keep the drone's battery level in mind during extended operations
+- Ensure your computer is connected to the Tello drone's WiFi before running any scripts.
+- Tested on Windows with Python 3.10.
+- Some features may require good lighting conditions for optimal performance.
+- Keep the drone's battery level in mind during extended operations.
+
+## Troubleshooting
+
+- If you encounter issues with video streaming, ensure your firewall allows UDP traffic.
+- For face tracking, make sure `Resources/haarcascade_frontalface_default.xml` is present.
+- If you have dependency issues, try upgrading pip: `python -m pip install --upgrade pip`.
